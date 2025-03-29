@@ -114,26 +114,26 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import streamlit_authenticator as stauth
+# import streamlit_authenticator as stauth
 
 
 
 
-credentials = {
-    "user1": {"name": "User One", "password": "$2b$12$eImiTXuWVxfM37uY4JANjQ=="},
-    "user2": {"name": "User Two", "password": "$2b$12$BnPZ5z/PcBv/CkZ0FNMoZ.=="},
-}
+# credentials = {
+#     "user1": {"name": "User One", "password": "$2b$12$eImiTXuWVxfM37uY4JANjQ=="},
+#     "user2": {"name": "User Two", "password": "$2b$12$BnPZ5z/PcBv/CkZ0FNMoZ.=="},
+# }
 
 
-authenticator = stauth.Authenticate(
-    credentials, "streamlit_auth", "abcdef", cookie_expiry_days=30
-)
+# authenticator = stauth.Authenticate(
+#     credentials, "streamlit_auth", "abcdef", cookie_expiry_days=30
+# )
 
 
-name, authentication_status, username = authenticator.login("Login", "main")
+# name, authentication_status, username = authenticator.login("Login", "main")
 
-if authentication_status:
-    st.sidebar.success(f"Welcome {name}!")
+# if authentication_status:
+#     st.sidebar.success(f"Welcome {name}!")
 
 
 
@@ -143,7 +143,7 @@ if authentication_status:
 
 csv_file = "C:\\Users\\Deckmount\\Downloads\\DATA0637.TXT"
 
-st.title("Graph Plotter with Noise Reduction")
+st.title("Graph Plotter ")
 
 try:
     df = pd.read_csv(csv_file, names=["timestamp", "unknown1", "unknown2", "unknown3", "unknown4",
@@ -178,9 +178,9 @@ if not df.empty:
 
 
 
-    authenticator.logout("Logout", "sidebar")
+#     authenticator.logout("Logout", "sidebar")
 
-elif authentication_status == False:
-    st.error("Incorrect Username/Password")
-elif authentication_status == None:
-    st.warning("Please enter your login details")
+# elif authentication_status == False:
+#     st.error("Incorrect Username/Password")
+# elif authentication_status == None:
+#     st.warning("Please enter your login details")
