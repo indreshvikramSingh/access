@@ -139,9 +139,8 @@ import matplotlib.pyplot as plt
 
 
 
+csv_url = "https://raw.githubusercontent.com/indreshvikramSingh/access/main/DATA0637.TXT"
 
-
-csv_file = "C:\\Users\\Deckmount\\Downloads\\DATA0637.TXT"
 
 st.title("Graph Plotter ")
 
