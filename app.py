@@ -145,7 +145,7 @@ csv_url = "https://raw.githubusercontent.com/indreshvikramSingh/access/main/DATA
 st.title("Graph Plotter ")
 
 try:
-    df = pd.read_csv(csv_file, names=["timestamp", "unknown1", "unknown2", "unknown3", "unknown4",
+    df = pd.read_csv(csv_url, names=["timestamp", "unknown1", "unknown2", "unknown3", "unknown4",
                                     "breath_trend", "spo2", "spo2_2", "body_position", "pulse_trend"])
     st.write("### CSV Data:")
     st.write(df)
